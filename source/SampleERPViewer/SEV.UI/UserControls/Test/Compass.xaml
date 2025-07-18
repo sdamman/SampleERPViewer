@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="SEV.UI.UserControls.Test.Compass"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:theme="clr-namespace:CustomT.UI"
+             mc:Ignorable="d">
+
+
+  <Viewbox Height="{Binding RelativeSource={RelativeSource Self}}" Stretch="Uniform">
+    <Grid d:Background="BlanchedAlmond">
+      <Canvas x:Name="star" Height="111.5" Width="96.2"
+            RenderTransformOrigin="0.5,0.5686">
+         <Path Data="M 96.234604,63.412491 H 48.117301 l 7.918037,8.16167 z"
+            Fill="{theme:ThemeResource ResourceKey=MaxContrast}"
+            d:Fill="Black"/>
+        <Path Data="m 48.117302,111.52979 v -48.1173 l -8.16167,7.918037 z"
+            Fill="{theme:ThemeResource ResourceKey=MaxContrast}"
+            d:Fill="Black"/>
+        <Path Data="M 0,63.41249 H 48.117302 L 40.199265,55.25082 Z"
+            Fill="{theme:ThemeResource ResourceKey=MaxContrast}"
+            d:Fill="Black"/>
+        <Path Data="M 48.117302,15.295188 V 63.41249 l 8.16167,-7.918037 z"
+            Fill="{theme:ThemeResource ResourceKey=MaxContrast}"
+            d:Fill="Black"/>
+       <Path Data="M 48.1173,35.699402 
+            A 27.713114,27.713117 0 0 0 20.40438,63.412322 27.713114,27.713117 0 0 0 48.1173,91.125841 27.713114,27.713117 0 0 0 75.830214,63.412322 27.713114,27.713117 0 0 0 48.1173,35.699402 Z m 0,8.840205 
+            A 18.87298,18.872982 0 0 1 66.990015,63.412322 18.87298,18.872982 0 0 1 48.1173,82.285633 18.87298,18.872982 0 0 1 29.244585,63.412322 18.87298,18.872982 0 0 1 48.1173,44.539607 Z"
+            Fill="{theme:ThemeResource ResourceKey=Complement}"
+            d:Fill="{StaticResource brushDark40}"/>
+        <Path Data="M 48.117302,15.295188 V 63.41249 l -8.16167,-7.918037 z"
+            Fill="{theme:ThemeResource ResourceKey=MinContrast}"
+            d:Fill="White"/>
+        <Path Data="m 0,63.41249 h 48.117302 l -7.918037,8.16167 z"
+            Fill="{theme:ThemeResource ResourceKey=MinContrast}"
+            d:Fill="White"/>
+        <Path Data="m 48.117302,111.52979 v -48.1173 l 8.16167,7.918037 z"
+            Fill="{theme:ThemeResource ResourceKey=MinContrast}"
+            d:Fill="White"/>
+        <Path Data="M 96.234604,63.412491 H 48.117301 l 7.918037,-8.16167 z"
+            Fill="{theme:ThemeResource ResourceKey=MinContrast}"
+            d:Fill="White"/>
+        <Path Data="M 42.76342,12.601594 V 0 h 4.094927 l 1.832536,6.0358775 
+              V 0 h 3.846062 v 12.601594 h -3.89131 L 46.654731,6.3007974 v 6.3007966 z"
+            Fill="{theme:ThemeResource ResourceKey=MaxContrast}"
+              Opacity="0.6"
+            d:Fill="Black"
+              RenderTransformOrigin="0.904,0.5">
+          <Path.RenderTransform>
+            <RotateTransform Angle="{Binding NegativeFieldBearing}"/>
+          </Path.RenderTransform>
+        </Path>
+        <Canvas.RenderTransform>
+          <RotateTransform Angle="{Binding FieldBearing}"/>
+        </Canvas.RenderTransform>
+      </Canvas>
+    </Grid>
+  </Viewbox>
+</UserControl>

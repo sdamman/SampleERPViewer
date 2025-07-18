@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="SEV.UI.UserControls.SearchResults"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:conv="clr-namespace:SEV.UI.Converters"
+             xmlns:theme="clr-namespace:CustomT.UI"
+             xmlns:uc="clr-namespace:SEV.UI.UserControls"
+             mc:Ignorable="d" d:Background="White"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+  <UserControl.Resources>
+    <conv:CurrencyDisplayConverter x:Key="cDC"/>
+    <BooleanToVisibilityConverter x:Key="b2VC"/>
+  </UserControl.Resources>
+
+  <Grid Margin="20,0" 
+        Visibility="{Binding IsSearchResultsVisible, Converter={StaticResource b2VC}}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Border Background="{theme:ThemeResource ResourceKey=MouseOverBackground}"
+                Margin="-5,0,-5,2"/>
+    <StackPanel Grid.Row="0" Orientation="Horizontal">
+      <TextBlock Text="Search Results" 
+               FontFamily="Segoe UI Semibold" 
+               FontSize="24"
+               Foreground="{StaticResource brushMainThemeBlue}"/>
+      <Button Style="{DynamicResource ButtonCopy}" 
+              Height="25" Margin="4,0,4,0"
+              Command="{Binding CommandCopySearchResults}"/>
+    </StackPanel>
+    <uc:CurrentDate Grid.Row="0"  HorizontalAlignment="Right" 
+                    VerticalAlignment="Bottom"/>
+
+    <Border Grid.Row="1" BorderBrush="{theme:ThemeResource ResourceKey=MaxContrast}"
+            d:BorderBrush="Black" BorderThickness="0,0,0,1">
+      <Grid Margin="0,0,18,0">
+        <Grid.Resources>
+          <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource bodyCopy}">
+            <Setter Property="Foreground" Value="{theme:ThemeResource ResourceKey=Complement}"/>
+          </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="1*"/>
+          <ColumnDefinition Width="6*"/>
+          <ColumnDefinition Width="1*"/>
+          <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox Grid.Column="0" Content="P/N" Margin="3,0"
+                  IsChecked="{Binding IsPartAscending}"
+                  Style="{DynamicResource SortableHeaderCheck}"/>
+        <TextBlock Grid.Column="1" Text="Rev"/>
+        <CheckBox Grid.Column="2" Content="Description"
+                  IsChecked="{Binding IsDescriptionAscending}"
+                  Style="{DynamicResource SortableHeaderCheck}"/>
+        <TextBlock Grid.Column="3" Text="UOM"/>
+        <CheckBox Grid.Column="4" Content="StdCst"
+                  IsChecked="{Binding IsCostAscending}"
+                  Style="{DynamicResource SortableHeaderCheck}"/>
+      </Grid>
+    </Border>
+    <ScrollViewer Grid.Row="2"  >
+      <ItemsControl VirtualizingPanel.VirtualizationMode="Recycling" 
+                    AlternationCount="2"
+               ItemsSource="{Binding ItemsList, FallbackValue='123'}">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <DataTemplate.Resources>
+              <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource bodyCopy}"/>
+            </DataTemplate.Resources>
+            <Grid x:Name="content">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+              </Grid.ColumnDefinitions>
+              <Button Grid.Column="0" Content="{Binding PartNumber, FallbackValue='3031278A'}"
+                    Style="{DynamicResource LightBlueButtonStyle}"
+                    Command="{Binding DataContext.CommandGetItemMaster, 
+                      RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                    CommandParameter="{Binding PartNumber}"
+                      HorizontalContentAlignment="Left"
+                      HorizontalAlignment="Left"
+                      MaxWidth="100"
+                      Padding="10,0"
+                    Margin="3,1" Cursor="Hand"/>
+              <TextBlock Grid.Column="1" Text="{Binding Revision, FallbackValue='000'}"/>
+              <TextBlock Grid.Column="2" Text="{Binding Description, FallbackValue='DESCRIPTION\,LONG\,CHARACTERS'}"/>
+              <TextBlock Grid.Column="3" Text="{Binding UnitOfMeasure, FallbackValue='EA'}"/>
+              <TextBlock Grid.Column="4" Text="{Binding StandardCost, 
+              Converter={StaticResource cDC}, FallbackValue='$345.67'}"/>
+            </Grid>
+            <DataTemplate.Triggers>
+              <Trigger Property="ItemsControl.AlternationIndex"
+										 Value="1">
+                <Setter TargetName="content" 
+											Property="Background"
+											Value="{theme:ThemeResource ResourceKey=MinContrast}"/>
+              </Trigger>
+            </DataTemplate.Triggers>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </ScrollViewer>
+  </Grid>
+</UserControl>

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SEV.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StartWindowPosition" Type="System.Windows.Rect" Scope="User">
+      <Value Profile="(Default)">50,50,450,600</Value>
+    </Setting>
+    <Setting Name="StartWindowState" Type="System.Windows.WindowState" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="SavedThemeType" Type="CustomT.UI.ThemeType" Scope="User">
+      <Value Profile="(Default)">Dark</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

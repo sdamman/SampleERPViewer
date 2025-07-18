@@ -1,0 +1,929 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:gui="clr-namespace:CustomT.UI.UserControls"
+    xmlns:theme="clr-namespace:CustomT.UI">
+
+  <Style TargetType="{x:Type Path}">
+    <Setter Property="StrokeLineJoin" Value="Round"/>
+    <Setter Property="StrokeStartLineCap" Value="Round"/>
+    <Setter Property="StrokeEndLineCap" Value="Round"/>
+    <Setter Property="StrokeThickness" Value="1.5"/>
+  </Style>
+
+  <ControlTemplate x:Key="Icon_Arrow" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path
+          Data="M 2.5,8.5 H 37.5 L 20,27.5 Z"
+          Stroke="{TemplateBinding Foreground}"
+          StrokeThickness="2"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Circle_Cycle" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 5.8776774,28.03033 c 2.887,5.079 8.279,8.217855 14.122,8.219654 8.974761,0 16.25,-7.27541 16.25,-16.250171 C 36.25,11.025 28.974,3.75 20,3.75 13.331,3.7524989 7.3413,7.8285362 4.892,14.030668"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2.5"/>
+        <Path Data="M 10.886038,14.030858 H 4.8860383 v -6"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2.5" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Combine" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Ellipse Canvas.Left="18.429" Canvas.Top="23.812"
+                 Width="5.166" Height="5.166"
+                 Fill="{TemplateBinding Foreground}"/>
+        <Ellipse Canvas.Left="2.922" Canvas.Top="27.164"
+                 Width="3.285" Height="3.285"
+                 Fill="{TemplateBinding Foreground}"/>
+        <Path Data="m 21.011547,19.893496 a 6.5016022,6.5015548 0 0 0 -6.50143,6.501741 6.5016022,6.5015548 0 0 0 6.50143,6.501381 6.5016022,6.5015548 0 0 0 6.501791,-6.501381 6.5016022,6.5015548 0 0 0 -6.501791,-6.501741 z m 0,2.669666 a 3.8320701,3.8320422 0 0 1 3.8321,3.832075 3.8320701,3.8320422 0 0 1 -3.8321,3.831715 3.8320701,3.8320422 0 0 1 -3.831738,-3.831715 3.8320701,3.8320422 0 0 1 3.831738,-3.832075 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="M 4.5638485,24.672784 A 4.1334714,4.1334413 0 0 0 0.43049119,28.806348 4.1334714,4.1334413 0 0 0 4.5638485,32.939677 4.1334714,4.1334413 0 0 0 8.6974402,28.806348 4.1334714,4.1334413 0 0 0 4.5638485,24.672784 Z m 0,1.697271 A 2.4362846,2.4362668 0 0 1 7.000158,28.806348 2.4362846,2.4362668 0 0 1 4.5638485,31.242404 2.4362846,2.4362668 0 0 1 2.1277787,28.806348 2.4362846,2.4362668 0 0 1 4.5638485,26.370055 Z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 6.067804,23.811785 c 2.0069696,0.604214 3.4573633,2.351008 3.6823225,4.434836 h 3.6505455 c -0.355167,-1.488213 -0.239153,-3.106525 0.218448,-4.434836 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 0,20.065555 1.2486302,2.842093 H 13.99722 a 7.8363675,7.8363104 0 0 1 2.403383,-2.842093 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="M 2.9707559,10.808607 0.17206213,18.86004 H 23.595015 v -2.085905 l -0.02164,0.0056 -13.036726,0.01684 C 9.7839645,16.838284 9.1174632,16.634986 9.1122081,15.744829 L 8.9938473,9.7323479 Z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 25.572443,20.022815 c 3.480787,2.992269 4.033984,6.379809 2.347843,10.059475 l 12.079716,0.618462 -0.04312,-0.68897 -8.223864,-5.769664 -4.650396,-4.219303 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="M 23.465945,7.1056768 V 15.673951 H 10.634969 C 10.306303,15.660591 10.117175,15.420397 10.118284,15.15727 V 9.9904702 c 0.07436,-0.3071979 0.250857,-0.5916964 0.688912,-0.8180751 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 24.714598,7.1487329 h 9.73087 c 0.388487,0.02191 0.406528,0.9351292 0,0.9472457 h -9.73087 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 24.671539,9.2154512 h 8.482221 l -1.743813,8.2238208 c -0.136343,0.581265 -0.990306,1.435222 -1.657687,1.463926 h -5.080721 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+  
+  <ControlTemplate x:Key="Icon_Combine_Wait" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40" Opacity="0.8">
+        <Ellipse Canvas.Left="18.429" Canvas.Top="23.812"
+                 Width="5.166" Height="5.166"
+                 Fill="{TemplateBinding Foreground}"/>
+        <Ellipse Canvas.Left="2.922" Canvas.Top="27.164"
+                 Width="3.285" Height="3.285"
+                 Fill="{TemplateBinding Foreground}"/>
+        <Path Data="m 6.067804,23.811785 c 2.0069696,0.604214 3.4573633,2.351008 3.6823225,4.434836 h 3.6505455 c -0.355167,-1.488213 -0.239153,-3.106525 0.218448,-4.434836 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 0,20.065555 1.2486302,2.842093 H 13.99722 a 7.8363675,7.8363104 0 0 1 2.403383,-2.842093 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="M 2.9707559,10.808607 0.17206213,18.86004 H 23.595015 v -2.085905 l -0.02164,0.0056 -13.036726,0.01684 C 9.7839645,16.838284 9.1174632,16.634986 9.1122081,15.744829 L 8.9938473,9.7323479 Z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 25.572443,20.022815 c 3.480787,2.992269 4.033984,6.379809 2.347843,10.059475 l 12.079716,0.618462 -0.04312,-0.68897 -8.223864,-5.769664 -4.650396,-4.219303 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="M 23.465945,7.1056768 V 15.673951 H 10.634969 C 10.306303,15.660591 10.117175,15.420397 10.118284,15.15727 V 9.9904702 c 0.07436,-0.3071979 0.250857,-0.5916964 0.688912,-0.8180751 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 24.714598,7.1487329 h 9.73087 c 0.388487,0.02191 0.406528,0.9351292 0,0.9472457 h -9.73087 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 24.671539,9.2154512 h 8.482221 l -1.743813,8.2238208 c -0.136343,0.581265 -0.990306,1.435222 -1.657687,1.463926 h -5.080721 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+  
+  <ControlTemplate x:Key="Icon_Combine_Gears" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Ellipse Canvas.Left="18.8" Canvas.Top="29.9" 
+                 Width="5.1" Height="5.1" 
+                 Fill="{TemplateBinding Foreground}"
+                 StrokeThickness="0" 
+                 StrokeLineJoin="Round"/>
+        <Ellipse Canvas.Left="3.6" Canvas.Top="33.2" 
+                 Width="3.2" Height="3.2" 
+                 Fill="{TemplateBinding Foreground}"
+                 StrokeThickness="0" 
+                 StrokeLineJoin="Round"/>
+        <Path Data="m 21.337811 26.040174 a 6.389891 6.3898037 0 0 0 -6.389722 6.389986 6.389891 6.3898037 0 0 0 6.389722 6.389628 6.389891 6.3898037 0 0 0 6.390076 -6.389628 6.389891 6.3898037 0 0 0 -6.390076 -6.389986 z m 0 2.623783 a 3.7662271 3.7661757 0 0 1 3.766257 3.766203 3.7662271 3.7661757 0 0 1 -3.766257 3.765855 3.7662271 3.7661757 0 0 1 -3.765902 -3.765855 3.7662271 3.7661757 0 0 1 3.765902 -3.766203 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 5.1727175 30.737316 a 4.0624497 4.0623942 0 0 0 -4.0623402 4.062516 4.0624497 4.0623942 0 0 0 4.0623402 4.062275 4.0624497 4.0623942 0 0 0 4.0625662 -4.062275 4.0624497 4.0623942 0 0 0 -4.0625662 -4.062516 z m 0 1.668096 a 2.3944241 2.3943914 0 0 1 2.3944491 2.39442 2.3944241 2.3943914 0 0 1 -2.3944491 2.394179 2.3944241 2.3943914 0 0 1 -2.3942132 -2.394179 2.3944241 2.3943914 0 0 1 2.3942132 -2.39442 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 6.6508265 29.891115 c 1.972486 0.593834 3.3979645 2.3106 3.6190595 4.358608 h 3.587816 c -0.349057 -1.462626 -0.235041 -3.05313 0.214697 -4.358608 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="M 0.68733414 26.209164 1.9143842 29.002515 H 14.443913 a 7.7017222 7.7016171 0 0 1 2.362174 -2.793351 H 13.28949 c -0.02893 0.149857 -0.06402 0.296803 -0.111228 0.437287 -1.322038 0.51881 -2.748261 0.73482 -4.1651659 0.669896 C 8.8053343 26.946868 8.596571 26.578126 8.3878893 26.209164 Z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 23.876865 22.974464 -0.02133 0.0056 -6.030121 0.0077 c -0.229363 0.331567 -0.478205 0.650245 -0.746592 0.952278 -0.698966 -0.113435 -1.398049 -0.226089 -2.097058 -0.339264 -0.431441 0.139382 -0.787471 0.606237 -1.241272 0.794327 -0.11841 0.190221 -0.194421 0.404102 -0.249371 0.629266 H 23.876869 Z M 1.4664296 23.270051 0.85645941 25.024276 H 3.1348328 C 2.510826 24.509923 1.9495662 23.920505 1.4664296 23.270051 Z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 25.820336 26.167271 c 3.420982 2.940838 3.964677 6.270151 2.307509 9.88657 L 40 36.661671 39.95764 35.984543 31.875084 30.314058 27.304587 26.167271 Z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 23.749894 13.54919 c -0.488145 0.634972 -0.723002 1.463061 -1.142742 2.153927 -0.663662 0.04617 -1.331119 0.07293 -1.994465 0.0077 -0.348034 -0.06606 -0.763536 -0.09193 -1.151884 -0.171664 -0.517424 0.468581 -1.032478 0.939343 -1.54905 1.408865 -0.153368 0.440719 -0.02895 1.025148 -0.157444 1.514504 0.296892 0.662866 0.948686 1.190518 1.403287 1.799426 -0.176418 0.562886 -0.402532 1.108948 -0.673456 1.631317 h 5.265754 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 27.015595 13.514654 c -0.271768 0.23317 -0.585666 0.382598 -0.978186 0.339266 -0.358097 -0.03614 -0.709243 -0.204337 -1.059957 -0.335203 v 0.926885 h 9.563479 c 0.399545 -0.01191 0.381805 -0.909414 0 -0.930948 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="m 24.934915 15.54567 h 8.336478 l -1.713848 8.082467 c -0.134007 0.571274 -0.973294 1.410552 -1.629207 1.438768 h -4.993423 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Path Data="M 22.159911 0.54190392 A 7.1086926 7.1086473 0 0 0 20.813505 0.52334844 L 19.80517 2.5319354 A 5.319187 5.3191531 0 0 0 18.715399 3.0141548 L 16.548864 2.3982376 A 7.1086926 7.1086473 0 0 0 15.652426 3.4024529 7.1086926 7.1086473 0 0 0 14.96331 4.559117 l 1.236099 1.878844 a 5.319187 5.3191531 0 0 0 -0.103083 0.5890845 5.319187 5.3191531 0 0 0 -0.02757 0.5973775 l -1.614207 1.5653723 a 7.1086926 7.1086473 0 0 0 0.421541 1.2786947 7.1086926 7.1086473 0 0 0 0.65729 1.175231 l 2.244573 -0.130967 a 5.319187 5.3191531 0 0 0 0.963905 0.711261 l 0.547389 2.175489 a 7.1086926 7.1086473 0 0 0 1.318013 0.274177 7.1086926 7.1086473 0 0 0 1.346407 0.01857 l 1.009147 -2.010353 A 5.319187 5.3191531 0 0 0 24.05599 12.20252 l 2.162286 0.61514 a 7.1086926 7.1086473 0 0 0 0.896467 -1.004527 7.1086926 7.1086473 0 0 0 0.689425 -1.156635 L 26.568344 8.7779962 a 5.319187 5.3191531 0 0 0 0.10279 -0.5891111 5.319187 5.3191531 0 0 0 0.03175 -0.6018709 L 28.312908 6.0258239 A 7.1086926 7.1086473 0 0 0 27.891369 4.7471299 7.1086926 7.1086473 0 0 0 27.234081 3.5719024 L 24.994805 3.70252 A 5.319187 5.3191531 0 0 0 24.025059 2.9909261 L 23.477908 0.81608478 A 7.1086926 7.1086473 0 0 0 22.159892 0.54190785 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="1" />
+        <Path Data="M 12.134876 8.5824285 A 7.150482 7.1504365 0 0 0 10.806033 8.3203018 L 9.5469431 9.9893746 A 7.2645606 7.2645144 0 0 0 7.2814044 10.353233 L 5.5620293 9.1576033 A 7.150482 7.1504365 0 0 0 4.381437 9.8205117 7.150482 7.1504365 0 0 0 3.3478998 10.695959 l 0.5211176 2.028955 A 7.2645606 7.2645144 0 0 0 2.738311 14.719799 l -2.00520604 0.598299 a 7.150482 7.1504365 0 0 0 -0.21793201 1.336554 7.150482 7.1504365 0 0 0 0.0401874 1.353619 l 1.91016455 0.857666 a 7.2645606 7.2645144 0 0 0 0.8545229 2.130211 L 2.5386387 22.93426 a 7.150482 7.1504365 0 0 0 0.9088913 1.003793 7.150482 7.1504365 0 0 0 1.0835273 0.812791 l 1.8579651 -0.957195 a 7.2645606 7.2645144 0 0 0 1.0744923 0.418328 7.2645606 7.2645144 0 0 0 1.1277432 0.24014 l 1.0278536 1.819319 a 7.150482 7.1504365 0 0 0 1.3514505 -0.08477 7.150482 7.1504365 0 0 0 1.310929 -0.340393 l 0.410253 -2.050324 a 7.2645606 7.2645144 0 0 0 1.888509 -1.310119 l 2.062523 0.33058 a 7.150482 7.1504365 0 0 0 0.776345 -1.109596 7.150482 7.1504365 0 0 0 0.551182 -1.23696 l -1.347672 -1.599681 a 7.2645606 7.2645144 0 0 0 0.152644 -2.291705 l 1.54554 -1.407458 a 7.150482 7.1504365 0 0 0 -0.383476 -1.298608 7.150482 7.1504365 0 0 0 -0.623751 -1.202471 l -2.09191 0.05629 A 7.2645606 7.2645144 0 0 0 13.525854 11.176226 L 13.389339 9.0923269 A 7.150482 7.1504365 0 0 0 12.134872 8.5824196 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="1" />
+        <Ellipse Canvas.Left="18.929" Canvas.Top="5.153" 
+                 Width="4.91" Height="4.91"
+                 StrokeThickness="1" 
+                 Stroke="{TemplateBinding Foreground}"/>
+        <Ellipse Canvas.Left="6.386" Canvas.Top="14" 
+                 Width="6.55" Height="6.55"
+                 StrokeThickness="1" 
+                 Stroke="{TemplateBinding Foreground}"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Continue_Arrow" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path
+          Data="m 2 20 35 0 "
+          Stroke="{TemplateBinding Foreground}"
+          StrokeThickness="2" />
+        <Path
+          Data="m 32.2 16.5 4.8 3.5 -4.8 3.5"
+          Stroke="{TemplateBinding Foreground}"
+          StrokeThickness="2" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Copy" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 15,31 H 7 V 5 h 13"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+        <Path Data="m 20,5 5,5"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+        <Path Data="m 15,10 h 13 v 5 h 5 V 36 H 15 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+        <Path Data="m 28,10 5,5"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_D1" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Ellipse Canvas.Left="0.5" Canvas.Top="0.5"
+                 Width="39" Height="39"
+                 Fill="{TemplateBinding Background}"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="1.5"/>
+        <Path Data="M 9.0552612 10.066569 L 6.1288249 30.050362 L 21.462773 30.050362 L 26.145174 11.469067 L 25.326103 10.183358 L 9.0552612 10.066569 z M 11.396204 13.689087 L 21.229195 13.806392 L 19.005042 26.427844 L 10.225732 26.427844 L 12.68398 14.62443 L 11.747603 14.507642 L 11.396204 13.689087 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="0" />
+        <Path Data="m 28.135363,10.066601 -0.819386,5.142017 1.170549,-0.116864 -1.638771,8.764802 4.682222,0.116863 2.34111,-14.0236827 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_DB" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Ellipse Canvas.Left="3" Canvas.Top="5.5"
+                 Width="34" Height="8"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeEndLineCap="Round"
+                 StrokeLineJoin="Round"
+                 StrokeMiterLimit="4"
+                 StrokeStartLineCap="Round"
+                 StrokeThickness="1.5" />
+        <Path Data="m 37,20 a 17,4 0 0 1 -8.5,3.464102 17,4 0 0 1 -17,0 A 17,4 0 0 1 3,20"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 37,30.5 a 17,4 0 0 1 -8.5,3.464102 17,4 0 0 1 -17,0 A 17,4 0 0 1 3,30.5"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 3,9.5 V 30.5"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 37,9.5 V 30.5"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Ellipse Canvas.Left="3" Canvas.Top="16"
+                 Width="34" Height="8"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeEndLineCap="Round"
+                 StrokeLineJoin="Round"
+                 StrokeStartLineCap="Round"
+                 StrokeThickness="0.75" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Edit" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 20.959098,6.7372867 H 0.9994494 V 37.744439 H 31.93942 v -16.985"
+              Fill="{TemplateBinding Background}"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 26.828728,6.1136852 34.20528,13.813876"
+              Fill="{TemplateBinding Background}"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 8.968964,30.696836 9.2568904,23.021669 31.670508,1.5501024 38.999578,9.2007303 16.633426,30.721874 Z"
+              Fill="{TemplateBinding Background}"
+              Stroke="{TemplateBinding Foreground}"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Field" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Rectangle Canvas.Left="0.5" Canvas.Top="0.5"
+                   Width="39" Height="39"
+                   Stroke="{TemplateBinding Foreground}"
+                   StrokeEndLineCap="Round"
+                   StrokeLineJoin="Miter"
+                   StrokeStartLineCap="Round"
+                   StrokeThickness="1"/>
+        <Ellipse Canvas.Left="16" Canvas.Top="10.5"
+                 Width="8" Height="19"
+                 Fill="{TemplateBinding Background}"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeEndLineCap="Round"
+                 StrokeLineJoin="Miter"
+                 StrokeStartLineCap="Round"
+                 StrokeThickness="1"/>
+        <Path Data="m 27.651633,14.891807 c 3.18518,6.8396 -4.73763,16.29832 -7.63044,16.27828 -1.99649,-0.0139 -2.47625,-2.95946 -2.75542,-5.00218 l 5.63803,-3.77283 z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="1"/>
+        <Path Data="m 12.348373,14.891807 c -3.1851698,6.8396 4.73764,16.29832 7.63044,16.27828 1.9965,-0.0139 2.47625,-2.95946 2.75543,-5.00218 l -5.63804,-3.77283 z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="1"/>
+        <Path Data="M 7,0.75 V 39"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="M 13.5,0.75 V 13"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="M 20,0.75 V 8.3"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="M 26.5,0.75 V 13"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="M 33,0.75 V 39"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="M 13.5,39.5 V 28"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="M 20,39.5 V 33"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="M 26.5,39.5 V 28"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Field_Gears" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Rectangle Canvas.Left="0.5" Canvas.Top="0.5"
+                   Width="39" Height="39"
+                   Stroke="{TemplateBinding Foreground}"
+                   StrokeEndLineCap="Round"
+                   StrokeLineJoin="Miter"
+                   StrokeStartLineCap="Round"
+                   StrokeThickness="1"/>
+        <Ellipse Canvas.Left="24.898" Canvas.Top="16"
+                 Width="9" Height="20"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="1" />
+        <Path Data="m 37.049337,20.891805 c 3.18518,6.8396 -4.73763,16.29832 -7.63044,16.27828 -1.99649,-0.0139 -2.47625,-2.95946 -2.75542,-5.00218 l 5.63803,-3.77283 z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="1" />
+        <Path Data="m 21.746077,20.891805 c -3.18517,6.8396 4.73764,16.29832 7.63044,16.27828 1.9965,-0.0139 2.47625,-2.95946 2.75543,-5.00218 l -5.63804,-3.77283 z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="1" />
+        <Path Data="m 7,0.75 0,8.5 M 7,28 7,39"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1" />
+        <Path Data="m 13.5,0.75 0,8"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1" />
+        <Path Data="m 33,0.75 0,16"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="m 13.5,39.5 0,-9.75"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="m 20,39.5 0,-11"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="1"/>
+        <Path Data="m 23.65991,2.5419037 a 7.1086926,7.1086473 0 0 0 -1.346406,-0.018555 l -1.008335,2.008587 A 5.319187,5.3191531 0 0 0 20.215398,5.0141546 L 18.048863,4.3982374 A 7.1086926,7.1086473 0 0 0 17.152425,5.4024527 7.1086926,7.1086473 0 0 0 16.463309,6.559117 l 1.236099,1.878844 a 5.319187,5.3191531 0 0 0 -0.103083,0.589085 5.319187,5.3191531 0 0 0 -0.02757,0.597377 l -1.614207,1.565372 a 7.1086926,7.1086473 0 0 0 0.421541,1.278695 7.1086926,7.1086473 0 0 0 0.65729,1.175231 l 2.244573,-0.130967 a 5.319187,5.3191531 0 0 0 0.963905,0.711261 l 0.547389,2.175489 a 7.1086926,7.1086473 0 0 0 1.318013,0.274177 7.1086926,7.1086473 0 0 0 1.346407,0.01857 l 1.009147,-2.010353 a 5.319187,5.3191531 0 0 0 1.093176,-0.479378 l 2.162286,0.61514 a 7.1086926,7.1086473 0 0 0 0.896467,-1.004527 7.1086926,7.1086473 0 0 0 0.689425,-1.156635 l -1.235824,-1.878502 a 5.319187,5.3191531 0 0 0 0.10279,-0.589111 5.319187,5.3191531 0 0 0 0.03175,-0.601871 l 1.610024,-1.56119 A 7.1086926,7.1086473 0 0 0 29.391368,6.74713 7.1086926,7.1086473 0 0 0 28.73408,5.5719022 L 26.494804,5.7025198 A 5.319187,5.3191531 0 0 0 25.525058,4.9909259 L 24.977907,2.8160846 A 7.1086926,7.1086473 0 0 0 23.659891,2.5419077 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="1"/>
+        <Path Data="m 13.634875,10.582429 a 7.150482,7.1504365 0 0 0 -1.328843,-0.262127 l -1.25909,1.669073 a 7.2645606,7.2645144 0 0 0 -2.265539,0.363858 l -1.719375,-1.19563 a 7.150482,7.1504365 0 0 0 -1.180592,0.662909 7.150482,7.1504365 0 0 0 -1.033537,0.875447 l 0.521117,2.028955 A 7.2645606,7.2645144 0 0 0 4.23831,16.719799 l -2.005206,0.598299 a 7.150482,7.1504365 0 0 0 -0.217932,1.336554 7.150482,7.1504365 0 0 0 0.04019,1.353619 l 1.910165,0.857666 A 7.2645606,7.2645144 0 0 0 4.82005,22.996148 L 4.038641,24.93426 a 7.150482,7.1504365 0 0 0 0.908891,1.003793 7.150482,7.1504365 0 0 0 1.083527,0.812791 l 1.857965,-0.957195 a 7.2645606,7.2645144 0 0 0 1.074493,0.418328 7.2645606,7.2645144 0 0 0 1.127743,0.24014 l 1.027853,1.819319 a 7.150482,7.1504365 0 0 0 1.351451,-0.08477 7.150482,7.1504365 0 0 0 1.310929,-0.340393 l 0.410253,-2.050324 a 7.2645606,7.2645144 0 0 0 1.888506,-1.310119 l 2.062523,0.33058 a 7.150482,7.1504365 0 0 0 0.776345,-1.109596 7.150482,7.1504365 0 0 0 0.551182,-1.23696 L 18.12263,20.870173 a 7.2645606,7.2645144 0 0 0 0.152644,-2.291705 l 1.54554,-1.407458 a 7.150482,7.1504365 0 0 0 -0.383476,-1.298608 7.150482,7.1504365 0 0 0 -0.623751,-1.202471 l -2.09191,0.05629 A 7.2645606,7.2645144 0 0 0 15.025853,13.176226 L 14.889338,11.092327 A 7.150482,7.1504365 0 0 0 13.634871,10.58242 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="1"/>
+        <Ellipse Canvas.Left="20.429" Canvas.Top="7.153"
+                 Width="4.91" Height="4.91"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="1" />
+        <Ellipse Canvas.Left="7.886" Canvas.Top="16"
+                 Width="6.551" Height="6.551"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="1" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Field_Barn" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 21.465774,12.593556 24.787,12.500016 C 15.620154,16.312337 7.1066127,22.63454 0.99993896,27.441223 V 19.850472 C 6.5330438,16.86157 13.73531,14.616144 21.465774,12.593556 Z m 4.770351,-0.09354 c -5.669458,3.22377 -11.803533,6.674846 -25.23618644,18.199406 v 8.300785 H 5.2327555 C 10.424856,30.251426 22.714087,17.784761 29.724284,12.500012 Z m 4.723226,0 C 27.490666,15.103866 13.142124,30.773561 8.5100749,39.000203 l 9.2575761,-0.04651 c 2.83568,-6.351587 8.271665,-15.249124 16.694328,-26.453683 z m 4.564062,0 C 27.47183,23.367163 23.571757,32.515084 20.915002,39.000203 h 7.889441 c 0.449771,-2.7045 5.643196,-17.40104 9.602515,-26.500191 z m 3.47679,1.37511 c -3.061347,8.577642 -5.172496,16.751096 -7.249169,25.125081 h 7.249169 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="0" />
+        <Path Data="M 31.872159,0.66042483 A 6.7714339,4.5530422 0 0 0 25.099873,5.2131891 l 0.01821,6.5526869 h 3.099226 V 5.7177448 h 7.380107 v 6.0481312 h 3.027333 l 0.01821,-6.5526869 a 6.7714339,4.5530422 0 0 0 -6.7708,-4.55276427 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Field_Start" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 24.786601,12.500012 -3.425631,0.163814 c -0.840549,0.168128 -2.336859,0.604361 -4.155819,1.187525 0.532174,0.533076 1.064885,1.065346 1.599386,1.595768 0.02865,0.02235 0.05717,0.04703 0.08578,0.07028 1.982678,-1.059535 3.966174,-2.070831 5.896281,-3.017387 z m 1.449524,0 c -2.149654,1.162585 -4.356276,2.438312 -6.559807,3.798735 0.68234,0.835584 1.098478,1.901533 0.558106,2.918168 -3.379929,3.66139 -7.016036,7.08832 -10.509953,10.644311 -0.9448596,1.689637 -3.9636375,1.360039 -4.3454712,-0.60358 -0.00599,-0.876691 -0.010412,-1.753485 -0.013953,-2.630331 -1.5650958,1.34589 -3.0330651,2.70818 -4.36510824,4.072103 v 8.300785 H 5.2327555 C 10.424856,30.251426 22.714087,17.784761 29.724284,12.500012 Z m 4.723226,0 C 27.490666,15.103866 13.142124,30.773561 8.5100749,39.000203 l 9.2575761,-0.04651 c 2.83568,-6.351587 8.271665,-15.249124 16.694328,-26.453683 z m 4.564062,0 C 27.47183,23.367163 23.571757,32.515084 20.915002,39.000203 h 7.889441 c 0.449771,-2.7045 5.643196,-17.40104 9.602515,-26.500191 z m 3.47679,1.37511 c -3.061347,8.577642 -5.172496,16.751096 -7.249169,25.125081 h 7.249169 z M 5.356779,18.049544 c -1.8464633,0.712288 -3.4032952,1.350355 -4.35684004,1.800924 v 7.590751 C 2.3017577,26.237079 3.7698281,25.042373 5.356779,23.867277 c -0.0033,-1.938932 -0.00235,-3.878483 0,-5.817733 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="0" />
+        <Path Data="M 31.872159,0.66042483 A 6.7714339,4.5530422 0 0 0 25.099873,5.2131891 l 0.01821,6.5526869 h 3.099226 V 5.7177448 h 7.380107 v 6.0481312 h 3.027333 l 0.01821,-6.5526869 a 6.7714339,4.5530422 0 0 0 -6.7708,-4.55276427 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeEndLineCap="Flat"
+              StrokeStartLineCap="Flat"
+              StrokeThickness="0" />
+        <Path Data="m 7.4767562,7.115186 v 22 l 10.9999998,-11 z"
+              Fill="{TemplateBinding Foreground}"
+              Stroke="{TemplateBinding Background}"
+              StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Harvest_Pattern_1" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Rectangle Canvas.Left="0.5" Canvas.Top="0.5"
+                   Width="39" Height="39"
+                   Stroke="{TemplateBinding Foreground}"
+                   StrokeEndLineCap="Round"
+                   StrokeLineJoin="Round"
+                   StrokeStartLineCap="Round"
+                   StrokeThickness="1.5" />
+        <Path Data="M 8.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 16.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 32.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 24.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 8.7502706,5.7497295 6.2747831,8.2252174 M 8.7497295,5.7497295 11.225217,8.2252174"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 16.750541,34.320314 14.275054,31.844826 M 16.75,34.320314 19.225487,31.844826"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 24.75,5.75 22.274514,8.2254875 M 24.749459,5.75 27.224947,8.2254875"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 32.75,34.320314 -2.475486,-2.475488 m 2.474945,2.475488 2.475488,-2.475488"
+              Stroke="{TemplateBinding Foreground}"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Harvest_Pattern_2" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Rectangle Canvas.Left="0.5" Canvas.Top="0.5"
+                   Width="39" Height="39"
+                   Stroke="{TemplateBinding Foreground}"
+                   StrokeEndLineCap="Round"
+                   StrokeLineJoin="Round"
+                   StrokeStartLineCap="Round"
+                   StrokeThickness="1.5" />
+        <Path Data="M 16.75,27.386711 V 11.78937"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 32.75,9.9760438 0,24.3442702"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 8.7502706,5.7497295 6.2747831,8.2252174 M 8.7497295,5.7497295 11.225217,8.2252174"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 16.750541,11.78937 -2.475487,2.475488 M 16.75,11.78937 l 2.475487,2.475488"
+              Stroke="{TemplateBinding Foreground}" />
+        <Path Data="M 13.480142,33.646681 H 27.603281"
+              Stroke="{TemplateBinding Foreground}" />
+        <Path Data="m 13.480142,33.646681 2.475487,2.475486 m -2.475487,-2.474945 2.475487,-2.475488"
+              Stroke="{TemplateBinding Foreground}" />
+        <Path Data="m 32.75,34.320314 -2.475486,-2.475488 m 2.474945,2.475488 2.475488,-2.475488"
+              Stroke="{TemplateBinding Foreground}" />
+        <Path Data="m 12.926614,5.7497295 19.823386,0"
+              Stroke="{TemplateBinding Foreground}" />
+        <Path Data="m 32.75,5.7491885 -2.475488,2.475487 M 32.75,5.7497295 30.274512,3.2742425"
+              Stroke="{TemplateBinding Foreground}" />
+        <Path Data="M 25.054668,11.78937 V 27.386711"
+              Stroke="{TemplateBinding Foreground}" />
+        <Path Data="m 25.055209,27.386711 -2.475487,-2.475488 m 2.474946,2.475488 2.475487,-2.475488"
+              Stroke="{TemplateBinding Foreground}" />
+        <Path Data="M 8.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Harvest_Pattern_3" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Rectangle Canvas.Left="0.5" Canvas.Top="0.5"
+                     Width="39" Height="39"
+                     Stroke="{TemplateBinding Foreground}"
+                     StrokeEndLineCap="Round"
+                     StrokeLineJoin="Round"
+                     StrokeStartLineCap="Round"
+                     StrokeThickness="1.5" />
+        <Path Data="M 8.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 16.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 32.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 24.75,5.75 V 34.320314"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 8.75,5.75 6.2747831,8.2252174 M 8.75,5.75 11.225217,8.2252174"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 16.75,5.75 14.275054,8.2254879 M 16.75,5.75 19.225487,8.2254879"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 24.75,5.75 22.274514,8.2254875 M 24.75,5.75 27.224947,8.2254875"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 32.75,5.75 30.274514,8.2254875 M 32.75,5.75 35.224947,8.2254875"
+              Stroke="{TemplateBinding Foreground}"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Help" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Ellipse Canvas.Left="1" Canvas.Top="1"
+                 Width="38" Height="38"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="2"/>
+        <Path Data="m 17.796482,25.998509 c 0.02527,-1.503801 0.245013,-2.347697 0.560938,-3.219648 0.315925,-0.871952 0.960411,-1.838681 1.933458,-2.900187 l 2.483166,-2.558989 c 1.061507,-1.200513 1.59226,-2.489484 1.59226,-3.866915 0,-1.326883 -0.347517,-2.363116 -1.042551,-3.108697 -0.695034,-0.7582189 -1.705992,-1.1373283 -3.032875,-1.1373283 -1.288972,0 -2.325204,0.3411984 -3.108697,1.0235953 -0.783493,0.682397 -1.175239,1.598578 -1.175239,2.748543 -0.497882,1.784117 -3.303085,1.323215 -3.506762,0 0.02527,-2.047191 0.7519,-3.6963165 2.179879,-4.9473774 1.440615,-1.2636979 3.310888,-1.8955469 5.610819,-1.8955469 2.388389,0 4.246025,0.6444859 5.572908,1.9334578 1.339519,1.2763349 2.009279,3.0328755 2.009279,5.2696205 0,2.211471 -1.023595,4.39135 -3.070786,6.539637 l -2.066146,2.04719 c -0.922499,1.023595 -1.334609,2.250103 -1.334609,4.170925 -0.258493,1.484066 -3.575552,1.526366 -3.605042,-0.09828 z m -0.102503,6.352863 c 0,-0.568664 0.170599,-1.042551 0.511797,-1.42166 0.353835,-0.391746 0.871952,-0.587619 1.554349,-0.587619 0.682397,0 1.200513,0.195873 1.554348,0.587619 0.353835,0.379109 0.530753,0.852996 0.530753,1.42166 0,0.568665 -0.176918,1.042552 -0.530753,1.421661 -0.353835,0.366472 -0.871951,0.549708 -1.554348,0.549708 -0.682397,0 -1.200514,-0.183236 -1.554349,-0.549708 -0.341198,-0.379109 -0.511797,-0.852996 -0.511797,-1.421661 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Moisture" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 19.999813 0.59221191 L 19.864937 0.94619548 C 15.442829 12.379284 5.9373912 22.687845 9.7203369 32.000114 C 11.591096 36.60526 15.705313 39.130777 19.864937 39.381059 L 20.135205 39.381059 C 24.29483 39.130777 28.409046 36.60526 30.279806 32.000114 C 34.062696 22.687982 24.557398 12.3796 20.135205 0.94671224 L 19.999813 0.59221191 z M 20.037537 6.178951 L 20.144507 6.4590373 C 23.633605 15.479554 31.132843 23.612621 28.148153 30.959867 C 26.672128 34.593316 23.42644 36.585813 20.144507 36.783285 L 19.931083 36.783285 C 16.649151 36.585813 13.402945 34.593316 11.926921 30.959867 C 8.9421864 23.612513 16.442052 15.479196 19.931083 6.4585205 L 20.037537 6.178951 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Moon" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 17.7788,0 A 20,20 0 0 0 0,19.876 20,20 0 0 0 20,39.876001 20,20 0 0 0 40,19.876 20,20 0 0 0 38.84184,13.1692 14,14 0 0 1 25.81384,26.0308 14,14 0 0 1 11.00864,13.9136 14,14 0 0 1 17.77864,0 Z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Sun" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Ellipse Canvas.Left="12" Canvas.Top="12"
+                 Width="16" Height="16"
+                 Fill="{TemplateBinding Foreground}"
+                 StrokeThickness="0" />
+        <Path Data="M 10.807613,10.80761 7.9791851,7.9791841 M 7,20 H 3 m 7.80761,9.192389 -2.828426,2.828428 M 20,33 v 4 m 9.192388,-7.80761 2.828428,2.828426 M 33,20 h 4 M 29.192389,10.807613 32.020816,7.9791854 M 20,7 V 3"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Cycle_Time" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 5.8776774,28.03033 c 2.887,5.079 8.279,8.217855 14.122,8.219654 8.974761,0 16.25,-7.27541 16.25,-16.250171 C 36.25,11.025 28.974,3.75 20,3.75 13.331,3.7524989 7.3413,7.8285362 4.892,14.030668"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2.5"/>
+        <Path Data="M 10.886038,14.030858 H 4.8860383 v -6"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2.5" />
+        <Path Data="M 20,11 v 9 l 6,6"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2.5" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_WeighHopper_1" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 9.25,21.75 h 21.5 c 0.277,0 0.5,0.223 0.5,0.5 v 11.5 c 0,0.277 -0.223,0.5 -0.5,0.5 H 9.25 c -0.277,0 -0.5,-0.223 -0.5,-0.5 v -11.5 c 0,-0.277 0.223,-0.5 0.5,-0.5 z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 10,4 H 30 L 20,12 Z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 13.791406 26.634033 A 1 1 0 0 0 12.790951 27.633972 A 1 1 0 0 0 13.791406 28.633911 A 1 1 0 0 0 14.791345 27.633972 A 1 1 0 0 0 13.791406 26.634033 z M 17.624247 26.683126 A 1 1 0 0 0 16.624308 27.683065 A 1 1 0 0 0 17.624247 28.683004 A 1 1 0 0 0 18.624186 27.683065 A 1 1 0 0 0 17.624247 26.683126 z M 11.039119 28.058752 A 1 1 0 0 0 10.039181 29.059208 A 1 1 0 0 0 11.039119 30.059147 A 1 1 0 0 0 12.039058 29.059208 A 1 1 0 0 0 11.039119 28.058752 z M 22.390881 28.157454 A 1 1 0 0 0 21.390426 29.157393 A 1 1 0 0 0 22.390881 30.157332 A 1 1 0 0 0 23.39082 29.157393 A 1 1 0 0 0 22.390881 28.157454 z M 19.933667 28.402917 A 1 1 0 0 0 18.933728 29.402856 A 1 1 0 0 0 19.933667 30.402795 A 1 1 0 0 0 20.933606 29.402856 A 1 1 0 0 0 19.933667 28.402917 z M 27.156999 28.402917 A 1 1 0 0 0 26.15706 29.402856 A 1 1 0 0 0 27.156999 30.402795 A 1 1 0 0 0 28.157454 29.402856 A 1 1 0 0 0 27.156999 28.402917 z M 16.051733 29.779061 A 1 1 0 0 0 15.051794 30.779 A 1 1 0 0 0 16.051733 31.778939 A 1 1 0 0 0 17.051672 30.779 A 1 1 0 0 0 16.051733 29.779061 z M 23.17688 30.368689 A 1 1 0 0 0 22.176941 31.368628 A 1 1 0 0 0 23.17688 32.368567 A 1 1 0 0 0 24.176819 31.368628 A 1 1 0 0 0 23.17688 30.368689 z M 13.250871 30.515967 A 1 1 0 0 0 12.250415 31.515906 A 1 1 0 0 0 13.250871 32.515845 A 1 1 0 0 0 14.25081 31.515906 A 1 1 0 0 0 13.250871 30.515967 z M 28.779122 30.76143 A 1 1 0 0 0 27.778666 31.761886 A 1 1 0 0 0 28.779122 32.761825 A 1 1 0 0 0 29.779061 31.761886 A 1 1 0 0 0 28.779122 30.76143 z M 19.245854 30.860132 A 1 1 0 0 0 18.245915 31.860071 A 1 1 0 0 0 19.245854 32.86001 A 1 1 0 0 0 20.245793 31.860071 A 1 1 0 0 0 19.245854 30.860132 z M 25.4863 31.20378 A 1 1 0 0 0 24.486361 32.203719 A 1 1 0 0 0 25.4863 33.204175 A 1 1 0 0 0 26.486239 32.203719 A 1 1 0 0 0 25.4863 31.20378 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_WeighHopper_2" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 9.25,21.75 h 21.5 c 0.277,0 0.5,0.223 0.5,0.5 v 11.5 c 0,0.277 -0.223,0.5 -0.5,0.5 H 9.25 c -0.277,0 -0.5,-0.223 -0.5,-0.5 v -11.5 c 0,-0.277 0.223,-0.5 0.5,-0.5 z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 10,4 H 30 L 20,12 Z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 13.791406 26.634033 A 1 1 0 0 0 12.790951 27.633972 A 1 1 0 0 0 13.791406 28.633911 A 1 1 0 0 0 14.791345 27.633972 A 1 1 0 0 0 13.791406 26.634033 z M 17.624247 26.683126 A 1 1 0 0 0 16.624308 27.683065 A 1 1 0 0 0 17.624247 28.683004 A 1 1 0 0 0 18.624186 27.683065 A 1 1 0 0 0 17.624247 26.683126 z M 11.039119 28.058752 A 1 1 0 0 0 10.039181 29.059208 A 1 1 0 0 0 11.039119 30.059147 A 1 1 0 0 0 12.039058 29.059208 A 1 1 0 0 0 11.039119 28.058752 z M 22.390881 28.157454 A 1 1 0 0 0 21.390426 29.157393 A 1 1 0 0 0 22.390881 30.157332 A 1 1 0 0 0 23.39082 29.157393 A 1 1 0 0 0 22.390881 28.157454 z M 19.933667 28.402917 A 1 1 0 0 0 18.933728 29.402856 A 1 1 0 0 0 19.933667 30.402795 A 1 1 0 0 0 20.933606 29.402856 A 1 1 0 0 0 19.933667 28.402917 z M 27.156999 28.402917 A 1 1 0 0 0 26.15706 29.402856 A 1 1 0 0 0 27.156999 30.402795 A 1 1 0 0 0 28.157454 29.402856 A 1 1 0 0 0 27.156999 28.402917 z M 16.051733 29.779061 A 1 1 0 0 0 15.051794 30.779 A 1 1 0 0 0 16.051733 31.778939 A 1 1 0 0 0 17.051672 30.779 A 1 1 0 0 0 16.051733 29.779061 z M 23.17688 30.368689 A 1 1 0 0 0 22.176941 31.368628 A 1 1 0 0 0 23.17688 32.368567 A 1 1 0 0 0 24.176819 31.368628 A 1 1 0 0 0 23.17688 30.368689 z M 13.250871 30.515967 A 1 1 0 0 0 12.250415 31.515906 A 1 1 0 0 0 13.250871 32.515845 A 1 1 0 0 0 14.25081 31.515906 A 1 1 0 0 0 13.250871 30.515967 z M 28.779122 30.76143 A 1 1 0 0 0 27.778666 31.761886 A 1 1 0 0 0 28.779122 32.761825 A 1 1 0 0 0 29.779061 31.761886 A 1 1 0 0 0 28.779122 30.76143 z M 19.245854 30.860132 A 1 1 0 0 0 18.245915 31.860071 A 1 1 0 0 0 19.245854 32.86001 A 1 1 0 0 0 20.245793 31.860071 A 1 1 0 0 0 19.245854 30.860132 z M 25.4863 31.20378 A 1 1 0 0 0 24.486361 32.203719 A 1 1 0 0 0 25.4863 33.204175 A 1 1 0 0 0 26.486239 32.203719 A 1 1 0 0 0 25.4863 31.20378 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+        <Path Data="M 19.999813 13.464294 A 1 1 0 0 0 18.999874 14.464233 A 1 1 0 0 0 19.999813 15.464172 A 1 1 0 0 0 20.999752 14.464233 A 1 1 0 0 0 19.999813 13.464294 z M 19.999813 15.970601 A 1 1 0 0 0 18.999874 16.97054 A 1 1 0 0 0 19.999813 17.970479 A 1 1 0 0 0 20.999752 16.97054 A 1 1 0 0 0 19.999813 15.970601 z M 19.999813 18.476908 A 1 1 0 0 0 18.999874 19.476847 A 1 1 0 0 0 19.999813 20.476786 A 1 1 0 0 0 20.999752 19.476847 A 1 1 0 0 0 19.999813 18.476908 z M 19.999813 22.997563 A 1 1 0 0 0 18.999874 23.997502 A 1 1 0 0 0 19.999813 24.997441 A 1 1 0 0 0 20.999752 23.997502 A 1 1 0 0 0 19.999813 22.997563 z "
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_WeighHopper_3" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 9.25,21.75 h 21.5 c 0.277,0 0.5,0.223 0.5,0.5 v 11.5 c 0,0.277 -0.223,0.5 -0.5,0.5 H 9.25 c -0.277,0 -0.5,-0.223 -0.5,-0.5 v -11.5 c 0,-0.277 0.223,-0.5 0.5,-0.5 z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 10,4 H 30 L 20,12 Z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 14.47922 35.233508 A 1 1 0 0 0 13.479281 36.233447 A 1 1 0 0 0 14.47922 37.233386 A 1 1 0 0 0 15.479159 36.233447 A 1 1 0 0 0 14.47922 35.233508 z M 19.933667 35.233508 A 1 1 0 0 0 18.933728 36.233447 A 1 1 0 0 0 19.933667 37.233386 A 1 1 0 0 0 20.933606 36.233447 A 1 1 0 0 0 19.933667 35.233508 z M 22.390881 35.233508 A 1 1 0 0 0 21.390426 36.233447 A 1 1 0 0 0 22.390881 37.233386 A 1 1 0 0 0 23.39082 36.233447 A 1 1 0 0 0 22.390881 35.233508 z M 27.156999 35.282601 A 1 1 0 0 0 26.15706 36.28254 A 1 1 0 0 0 27.156999 37.282479 A 1 1 0 0 0 28.157454 36.28254 A 1 1 0 0 0 27.156999 35.282601 z M 17.624247 35.331694 A 1 1 0 0 0 16.624308 36.331632 A 1 1 0 0 0 17.624247 37.331571 A 1 1 0 0 0 18.624186 36.331632 A 1 1 0 0 0 17.624247 35.331694 z M 28.779122 36.9533 A 1 1 0 0 0 27.778666 37.953239 A 1 1 0 0 0 28.779122 38.953178 A 1 1 0 0 0 29.779061 37.953239 A 1 1 0 0 0 28.779122 36.9533 z M 13.250871 37.248372 A 1 1 0 0 0 12.250415 38.248311 A 1 1 0 0 0 13.250871 39.24825 A 1 1 0 0 0 14.25081 38.248311 A 1 1 0 0 0 13.250871 37.248372 z M 11.039119 37.297465 A 1 1 0 0 0 10.039181 38.297404 A 1 1 0 0 0 11.039119 39.297343 A 1 1 0 0 0 12.039058 38.297404 A 1 1 0 0 0 11.039119 37.297465 z M 23.17688 37.297465 A 1 1 0 0 0 22.176941 38.297404 A 1 1 0 0 0 23.17688 39.297343 A 1 1 0 0 0 24.176819 38.297404 A 1 1 0 0 0 23.17688 37.297465 z M 16.051733 37.39565 A 1 1 0 0 0 15.051794 38.395589 A 1 1 0 0 0 16.051733 39.395528 A 1 1 0 0 0 17.051672 38.395589 A 1 1 0 0 0 16.051733 37.39565 z M 25.4863 37.39565 A 1 1 0 0 0 24.486361 38.395589 A 1 1 0 0 0 25.4863 39.395528 A 1 1 0 0 0 26.486239 38.395589 A 1 1 0 0 0 25.4863 37.39565 z M 19.245854 37.542928 A 1 1 0 0 0 18.245915 38.542867 A 1 1 0 0 0 19.245854 39.542806 A 1 1 0 0 0 20.245793 38.542867 A 1 1 0 0 0 19.245854 37.542928 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+        <Path Data="M 24.225911 4.8648193 A 1 1 0 0 0 23.225972 5.8647583 A 1 1 0 0 0 24.225911 6.8646973 A 1 1 0 0 0 25.22585 5.8647583 A 1 1 0 0 0 24.225911 4.8648193 z M 15.577344 4.9139119 A 1 1 0 0 0 14.577405 5.9138509 A 1 1 0 0 0 15.577344 6.9137899 A 1 1 0 0 0 16.577283 5.9138509 A 1 1 0 0 0 15.577344 4.9139119 z M 20.294885 5.7004272 A 1 1 0 0 0 19.294946 6.7003662 A 1 1 0 0 0 20.294885 7.7003052 A 1 1 0 0 0 21.294824 6.7003662 A 1 1 0 0 0 20.294885 5.7004272 z M 17.592208 6.2900553 A 1 1 0 0 0 16.592269 7.2899943 A 1 1 0 0 0 17.592208 8.2899333 A 1 1 0 0 0 18.592147 7.2899943 A 1 1 0 0 0 17.592208 6.2900553 z M 22.50612 6.3391479 A 1 1 0 0 0 21.506181 7.3390869 A 1 1 0 0 0 22.50612 8.3390259 A 1 1 0 0 0 23.506059 7.3390869 A 1 1 0 0 0 22.50612 6.3391479 z M 19.705257 7.9607544 A 1 1 0 0 0 18.705318 8.9606934 A 1 1 0 0 0 19.705257 9.9606323 A 1 1 0 0 0 20.705196 8.9606934 A 1 1 0 0 0 19.705257 7.9607544 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_WeighHopper_4" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 9.25,21.75 h 21.5 c 0.277,0 0.5,0.223 0.5,0.5 v 11.5 c 0,0.277 -0.223,0.5 -0.5,0.5 H 9.25 c -0.277,0 -0.5,-0.223 -0.5,-0.5 v -11.5 c 0,-0.277 0.223,-0.5 0.5,-0.5 z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 10,4 H 30 L 20,12 Z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 18.410246 4.7666341 A 1 1 0 0 0 17.410307 5.7665731 A 1 1 0 0 0 18.410246 6.766512 A 1 1 0 0 0 19.410185 5.7665731 A 1 1 0 0 0 18.410246 4.7666341 z M 21.751644 4.8157267 A 1 1 0 0 0 20.751705 5.8156657 A 1 1 0 0 0 21.751644 6.8156047 A 1 1 0 0 0 22.7521 5.8156657 A 1 1 0 0 0 21.751644 4.8157267 z M 24.570076 4.8648193 A 1 1 0 0 0 23.570138 5.8647583 A 1 1 0 0 0 24.570076 6.8646973 A 1 1 0 0 0 25.570015 5.8647583 A 1 1 0 0 0 24.570076 4.8648193 z M 15.577344 4.9139119 A 1 1 0 0 0 14.577405 5.9138509 A 1 1 0 0 0 15.577344 6.9137899 A 1 1 0 0 0 16.577283 5.9138509 A 1 1 0 0 0 15.577344 4.9139119 z M 20.048905 6.2409627 A 1 1 0 0 0 19.048966 7.2409017 A 1 1 0 0 0 20.048905 8.2408407 A 1 1 0 0 0 21.049361 7.2409017 A 1 1 0 0 0 20.048905 6.2409627 z M 17.6413 6.6827962 A 1 1 0 0 0 16.641361 7.683252 A 1 1 0 0 0 17.6413 8.6831909 A 1 1 0 0 0 18.641239 7.683252 A 1 1 0 0 0 17.6413 6.6827962 z M 22.06377 6.8796834 A 1 1 0 0 0 21.063831 7.8796224 A 1 1 0 0 0 22.06377 8.8795614 A 1 1 0 0 0 23.063708 7.8796224 A 1 1 0 0 0 22.06377 6.8796834 z M 19.75435 8.3049194 A 1 1 0 0 0 18.754411 9.3048584 A 1 1 0 0 0 19.75435 10.304797 A 1 1 0 0 0 20.754289 9.3048584 A 1 1 0 0 0 19.75435 8.3049194 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Stats" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Rectangle Canvas.Left="1" Canvas.Top="1"
+                   Width="38" Height="38"
+                   Stroke="{TemplateBinding Foreground}"
+                   StrokeThickness="2"/>
+        <Path Data="m 10,39 v -10"
+              StrokeEndLineCap="Round"
+              StrokeStartLineCap="Flat"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+        <Path Data="m 20,39 v -20"
+              StrokeEndLineCap="Round"
+              StrokeStartLineCap="Flat"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+        <Path Data="m 30,39 v -30"
+              StrokeEndLineCap="Round"
+              StrokeStartLineCap="Flat"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Temp" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 19.999813 6.0001506 A 3 3 0 0 0 16.999996 8.9999674 L 16.999996 27.14873 A 4.5 4.5 0 0 0 15.499829 30.499947 A 4.5 4.5 0 0 0 19.999813 34.999931 A 4.5 4.5 0 0 0 24.499797 30.499947 A 4.5 4.5 0 0 0 23.000146 27.146663 L 23.000146 8.9999674 A 3 3 0 0 0 19.999813 6.0001506 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0" />
+        <Ellipse Canvas.Left="25" Canvas.Top="6"
+                 Width="5" Height="5"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="1" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_TestWeight" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 8,10 h 24 l 6.5,28.5 H 1.5 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+        <Ellipse Canvas.Left="14.5" Canvas.Top="0.5"
+                 Width="11" Height="11"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="3" />
+        <Path Data="M 17 17.5 A 1 1 0 0 0 16 18.5 L 16 20.5 L 14 20.5 A 1 1 0 0 0 13 21.5 A 1 1 0 0 0 14 22.5 L 16 22.5 L 16 26.5 L 14 26.5 A 1 1 0 0 0 13 27.5 A 1 1 0 0 0 14 28.5 L 16 28.5 L 16 30.5 A 1 1 0 0 0 17 31.5 A 1 1 0 0 0 18 30.5 L 18 28.5 L 22 28.5 L 22 30.5 A 1 1 0 0 0 23 31.5 A 1 1 0 0 0 24 30.5 L 24 28.5 L 26 28.5 A 1 1 0 0 0 27 27.5 A 1 1 0 0 0 26 26.5 L 24 26.5 L 24 22.5 L 26 22.5 A 1 1 0 0 0 27 21.5 A 1 1 0 0 0 26 20.5 L 24 20.5 L 24 18.5 A 1 1 0 0 0 23 17.5 A 1 1 0 0 0 22 18.5 L 22 20.5 L 18 20.5 L 18 18.5 A 1 1 0 0 0 17 17.5 z M 18 22.5 L 22 22.5 L 22 26.5 L 18 26.5 L 18 22.5 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Trash" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 4,8 H 36 L 32,34 H 8 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+        <Path Data="m 8,34 h 24 v 3.5 l -24,0 z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+        <Path Data="M 4,5 H 36 V 8 H 4 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+        <Path Data="M 14,2 H 26 V 5 H 14 Z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+        <Path Data="M 20,12 V 30"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+        <Path Data="M 28.31,12 27,30"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+        <Path Data="m 11.69,12 1.31,18"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_User" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Ellipse Canvas.Left="9" Canvas.Top="5"
+                 Width="20" Height="20"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="2" />
+        <Path Data="M 19.999813,24.500252 A 18,11.5 0 0 0 1.9998779,35.999809 18,11.5 0 0 0 2.0758423,36.999748 H 37.9243 a 18,11.5 0 0 0 0.07545,-0.999939 18,11.5 0 0 0 -17.999935,-11.499557 z"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Weight" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 8.1283411,5.68843 31.871659,10.81158 Z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="M 20,10 V 32"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 28.371627,20.104722 c -1.02e-4,1.787312 1.472285,3.236207 3.5,3.236513 2.028892,0.0012 3.500103,-1.43065 3.5,-3.219 z"
+              Fill="{TemplateBinding Foreground}"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 31.871659,10.81158 -3.5,9.293142 7,0.01686 z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Ellipse Canvas.Left="17.5" Canvas.Top="5.75"
+                 Width="3.5" Height="3.5"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="1.5" />
+        <Path Data="m 5.75,32.75 28.5,0 1,4.5 H 4.75 Z"
+              Fill="{TemplateBinding Foreground}"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 4.6283091,14.981572 c -1.02e-4,1.787312 1.472285,3.236207 3.5,3.236512 2.0288919,0.0012 3.5001029,-1.43065 3.5,-3.219 z"
+              Fill="{TemplateBinding Foreground}"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 8.1283411,5.68843 -3.500032,9.293142 7.0000319,0.01686 z"
+              Stroke="{TemplateBinding Foreground}"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_WrenchGears" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 29.825566,3.7071258 a 8.9329623,8.9378771 0 0 0 -1.691928,-0.02333 L 26.866539,6.2092413 A 6.6842244,6.687902 0 0 0 25.497105,6.8155476 L 22.774583,6.0411398 a 8.9329623,8.9378771 0 0 0 -1.126487,1.2626246 8.9329623,8.9378771 0 0 0 -0.865961,1.4543022 l 1.553314,2.3623164 a 6.6842244,6.687902 0 0 0 -0.129537,0.740671 6.6842244,6.687902 0 0 0 -0.03465,0.751097 l -2.028453,1.968181 a 8.9329623,8.9378771 0 0 0 0.529719,1.607735 8.9329623,8.9378771 0 0 0 0.825967,1.477647 l 2.820587,-0.164669 a 6.6842244,6.687902 0 0 0 1.211267,0.894286 l 0.687863,2.735296 a 8.9329623,8.9378771 0 0 0 1.656248,0.34473 8.9329623,8.9378771 0 0 0 1.691929,0.02335 l 1.26812,-2.527666 a 6.6842244,6.687902 0 0 0 1.373712,-0.602734 l 2.717183,0.773431 a 8.9329623,8.9378771 0 0 0 1.126523,-1.263017 8.9329623,8.9378771 0 0 0 0.866349,-1.454265 l -1.552967,-2.361887 a 6.6842244,6.687902 0 0 0 0.129168,-0.740704 6.6842244,6.687902 0 0 0 0.0399,-0.756747 l 2.023197,-1.962923 A 8.9329623,8.9378771 0 0 0 37.02786,8.9944599 8.9329623,8.9378771 0 0 0 36.201895,7.5168174 l -2.81393,0.1642287 A 6.6842244,6.687902 0 0 0 32.169358,6.7863416 L 31.481794,4.0518601 A 8.9329623,8.9378771 0 0 0 29.825542,3.7071307 Z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Path Data="m 17.070679,14.457936 a 8.9854759,8.9904197 0 0 0 -1.669858,-0.329578 l -1.582204,2.098566 a 9.1288299,9.1338527 0 0 0 -2.846933,0.457488 L 8.8110741,15.181118 a 8.9854759,8.9904197 0 0 0 -1.4835622,0.833491 8.9854759,8.9904197 0 0 0 -1.298769,1.100721 l 0.65485,2.551055 a 9.1288299,9.1338527 0 0 0 -1.420874,2.508218 l -2.519793,0.752256 a 8.9854759,8.9904197 0 0 0 -0.273859,1.680483 8.9854759,8.9904197 0 0 0 0.0505,1.701938 l 2.400361,1.078365 a 9.1288299,9.1338527 0 0 0 1.073815,2.678366 l -0.981939,2.436836 a 8.9854759,8.9904197 0 0 0 1.142136,1.262094 8.9854759,8.9904197 0 0 0 1.361588,1.021942 l 2.3347656,-1.203505 a 9.1288299,9.1338527 0 0 0 1.3502345,0.525974 9.1288299,9.1338527 0 0 0 1.41715,0.301934 l 1.291627,2.287475 a 8.9854759,8.9904197 0 0 0 1.698267,-0.106584 8.9854759,8.9904197 0 0 0 1.647346,-0.427984 l 0.515534,-2.577923 a 9.1288299,9.1338527 0 0 0 2.373149,-1.647245 l 2.591819,0.415647 a 8.9854759,8.9904197 0 0 0 0.975574,-1.395123 8.9854759,8.9904197 0 0 0 0.692629,-1.55526 l -1.693518,-2.011318 a 9.1288299,9.1338527 0 0 0 0.191816,-2.881417 l 1.942165,-1.769632 A 8.9854759,8.9904197 0 0 0 24.3622,21.10915 8.9854759,8.9904197 0 0 0 23.578379,19.597254 l -2.628747,0.07078 a 9.1288299,9.1338527 0 0 0 -2.131015,-1.948847 l -0.171548,-2.620138 a 8.9854759,8.9904197 0 0 0 -1.576395,-0.641119 z"
+              Stroke="{TemplateBinding Foreground}"/>
+        <Ellipse Canvas.Left="25.743" Canvas.Top="9.928"
+                 Width="6.115" Height="6.115"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="1.4" />
+        <Ellipse Canvas.Left="9.725" Canvas.Top="21.147"
+                 Width="8.477" Height="8.477"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="1.5" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Status" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="20" Height="80">
+        <gui:XamlImage Template="{StaticResource Icon_TestWeight}"
+                       Canvas.Left="0" Canvas.Top="0"
+                       Width="20" Height="20"/>
+        <gui:XamlImage Template="{StaticResource Icon_Weight}"
+                       Canvas.Left="0" Canvas.Top="20"
+                       Width="20" Height="20"/>
+        <gui:XamlImage Template="{StaticResource Icon_Moisture}" 
+                       Canvas.Left="0" Canvas.Top="40"
+                       Width="20" Height="20"/>
+        <gui:XamlImage Template="{StaticResource Icon_Temp}" 
+                       Canvas.Left="0" Canvas.Top="60"
+                       Width="20" Height="20"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Error" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="m 35.000036,26.213044 -8.785333,8.788193 -12.425801,0.0015 L 5.0015,26.216613 5,13.789694 13.785333,5.0015 26.211134,5 l 8.787402,8.786124 z"
+              Fill="{StaticResource brushTemperature1}"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+        <Path Data="m 18,9.6802022 1,17.2008778 c 0.03205,0.551354 0.447715,1 1,1 0.552285,0 0.967946,-0.448646 1,-1 l 1,-17.2008778 c 0.130395,-1.9153124 -4.12881,-1.9586706 -4,0 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+        <Ellipse Canvas.Left="18" Canvas.Top="28.585"
+                 Width="4" Height="4"
+                 Fill="{TemplateBinding Foreground}"
+                 StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Warning" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Data="M 37.627222,34.997291 2.3749215,34.951075 20.04224,4.4998953 Z"
+              Fill="{StaticResource brushWarningAmber}"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="2"/>
+        <Path Data="m 18,13.036 1,13.98 c 0.03205,0.48 0.447715,0.870627 1,0.870627 0.552285,0 0.967946,-0.390604 1,-0.870627 l 1,-13.975398 c 0.130395,-1.667523 -4.12881,-1.705272 -4,0 z"
+              Fill="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+        <Ellipse Canvas.Left="18" Canvas.Top="28.585"
+                 Width="4" Height="4"
+                 Fill="{TemplateBinding Foreground}"
+                 StrokeThickness="0" />
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Info" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Ellipse Canvas.Left="3" Canvas.Top="3"
+                 Width="34" Height="34"
+                 Fill="{StaticResource brushGoodBlue}"
+                 Stroke="{TemplateBinding Foreground}"
+                 StrokeThickness="2" />
+        <Ellipse Canvas.Left="17.5" Canvas.Top="8"
+                 Width="5" Height="5"
+                 Fill="{TemplateBinding Foreground}"
+                 StrokeThickness="0" />
+        <Path Data="m 18,15 h 4 v 16 h -4 z"
+              Fill="{TemplateBinding Foreground}"
+              Stroke="{TemplateBinding Foreground}"
+              StrokeThickness="0"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Bag" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="m 9.0605591 37.943298 c 0 0 -1.7166504 -0.507958 -2.6100089 -0.65309 -0.8933583 -0.14513 -2.7501431 -0.217695 -2.7501431 -0.217695 0 0 -0.5803866 -0.01956 -0.8933582 -0.290262 C 2.2757053 36.32267 2.1939596 35.8389 2.1939596 35.8389 V 14.794915 L 6.6082019 6.4498875 V 2.7490482 L 32.813392 3.4747028 v 3.1203154 l 4.624445 8.4901588 v 19.52011 c 0 0 -0.06277 0.611666 -0.735707 1.19733 -0.804078 0.6998 -1.436381 0.761938 -1.436381 0.761938 z"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="m 8.973373 37.932288 c 0 0 0.9527681 -0.38497 1.311442 -0.760603 0.476832 -0.499379 0.498198 -1.077542 0.498198 -1.077542 V 14.697234 L 6.58097 6.4328717"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="m 28.048888 6.2530241 2.775118 0.054773"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="m 21.620104 6.1261339 2.820314 0.055668"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="m 15.1916 5.9992499 2.820033 0.055662"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="M 8.7268914 5.8716515 11.58313 5.9280267"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="m 24.036328 24.318147 c -1.511691 -0.981106 -3.189673 -2.586986 -3.319522 -4.335825 0.08041 -2.242493 1.64002 -3.442596 3.369066 -4.566727 1.689234 1.079028 3.441253 2.173042 3.468158 4.310168 -0.206685 2.244169 -1.741307 3.501714 -3.517702 4.592384 z"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="m 25.126319 29.628891 c 0.384231 -5.188996 5.410769 -6.489108 9.438342 -6.234352 0 0 -0.880002 0.681118 -1.089991 1.180166 -0.337065 0.801046 0.288451 1.869478 -0.148637 2.616887 -1.983262 2.436058 -5.29899 2.481233 -8.199714 2.437299 z"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+                      Data="m 23.247898 29.652652 c -0.384231 -5.188994 -5.410768 -6.489107 -9.438342 -6.234351 0 0 0.880003 0.681118 1.089992 1.180165 0.337065 0.801047 -0.288452 1.869478 0.148637 2.616889 1.983262 2.436056 5.29899 2.481232 8.199713 2.437297 z"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="Icon_Search" TargetType="{x:Type gui:XamlImage}">
+    <Viewbox>
+      <Canvas Width="40" Height="40">
+        <Path Stroke="{TemplateBinding Foreground}" 
+              StrokeThickness="3"
+              Data="M 28.5,17 A 11.5,11.5 0 0 1 17,28.5 11.5,11.5 0 0 1 5.5,17 
+              11.5,11.5 0 0 1 17,5.5 11.5,11.5 0 0 1 28.5,17 Z"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+              StrokeThickness="4"
+              Data="M 28.828428,28.828428 34.778,34.778"/>
+        <Path Stroke="{TemplateBinding Foreground}" 
+              StrokeThickness="2"
+              Data="m 26,26 2.12,2.12"/>
+      </Canvas>
+    </Viewbox>
+  </ControlTemplate>
+
+</ResourceDictionary>
+

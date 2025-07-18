@@ -1,0 +1,613 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:theme="clr-namespace:CustomT.UI"
+  xmlns:gui="clr-namespace:CustomT.UI.UserControls">
+
+
+  <Style x:Key="BasicGreyButtonStyle" TargetType="{x:Type Button}">
+    <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}" />
+    <Setter Property="Foreground" 
+            Value="{theme:ThemeResource ResourceKey=ContentBackground}" />
+    <Setter Property="Background" 
+            Value="{theme:ThemeResource ResourceKey=PressedBorder}" />
+    <Setter Property="BorderBrush" Value="{x:Null}" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Padding" Value="8,3" />
+    <Setter Property="Template" Value="{DynamicResource BasicGreyButtonTemplate}" />
+    <Setter Property="FontFamily" Value="Segoe UI Semibold" />
+    <Setter Property="FontWeight" Value="Medium" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Cursor" Value="Hand"/>
+  </Style>
+
+
+
+  <ControlTemplate x:Key="BlueButtonTemplate" TargetType="{x:Type Button}">
+    <Grid SnapsToDevicePixels="True">
+      <Border x:Name="border"
+              Background="{TemplateBinding Background}"
+              BorderBrush="{TemplateBinding BorderBrush}"
+              BorderThickness="{TemplateBinding BorderThickness}"
+              CornerRadius="5"
+              SnapsToDevicePixels="true">
+        <ContentPresenter x:Name="contentPresenter"
+                          Margin="{TemplateBinding Padding}"
+                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                          Focusable="False"
+                          RecognizesAccessKey="True"
+                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+      </Border>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsDefaulted" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushWhite}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushMainThemeBlue}" />
+      </Trigger>
+      <Trigger Property="IsMouseOver" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushDark60}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushDarkBlue}" />
+      </Trigger>
+      <Trigger Property="IsPressed" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushMainSecondaryBlue}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushDark80}" />
+      </Trigger>
+      <Trigger Property="IsEnabled" Value="false">
+        <Setter Property="Opacity" Value="0.4" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+
+  <Style x:Key="BlueButtonStyle" TargetType="{x:Type Button}">
+    <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}" />
+    <Setter Property="Foreground" Value="{StaticResource brushWhite}" />
+    <Setter Property="Background" Value="{StaticResource brushMainThemeBlue}" />
+    <Setter Property="BorderBrush" Value="{x:Null}" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Padding" Value="8,3" />
+    <Setter Property="Template" Value="{DynamicResource BlueButtonTemplate}" />
+    <Setter Property="FontFamily" Value="Segoe UI Semibold" />
+    <Setter Property="FontWeight" Value="Medium" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Cursor" Value="Hand"/>
+  </Style>
+  
+  <Style BasedOn="{StaticResource BlueButtonStyle}" TargetType="{x:Type Button}" />
+
+  <ControlTemplate x:Key="WhiteButtonTemplate" TargetType="{x:Type Button}">
+    <Grid SnapsToDevicePixels="True">
+      <Border x:Name="border"
+              Background="{TemplateBinding Background}"
+              BorderBrush="{TemplateBinding BorderBrush}"
+              BorderThickness="{TemplateBinding BorderThickness}"
+              CornerRadius="5"
+              SnapsToDevicePixels="true">
+        <ContentPresenter x:Name="contentPresenter"
+                          Margin="{TemplateBinding Padding}"
+                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                          Focusable="False"
+                          RecognizesAccessKey="True"
+                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+      </Border>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsDefaulted" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushDarkBlue}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushWhite}" />
+      </Trigger>
+      <Trigger Property="IsMouseOver" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushWhite}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushDarkBlue}" />
+      </Trigger>
+      <Trigger Property="IsPressed" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushMainSecondaryBlue}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushDark80}" />
+      </Trigger>
+      <Trigger Property="IsEnabled" Value="false">
+        <Setter Property="Opacity" Value="0.4" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+
+  <Style x:Key="WhiteButtonStyle" TargetType="{x:Type Button}">
+    <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisual}" />
+    <Setter Property="Foreground" Value="{StaticResource brushDarkBlue}" />
+    <Setter Property="Background" Value="{StaticResource brushWhite}" />
+    <Setter Property="BorderBrush" Value="{x:Null}" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Padding" Value="8,3" />
+    <Setter Property="Template" Value="{DynamicResource WhiteButtonTemplate}" />
+    <Setter Property="FontFamily" Value="Segoe UI Semibold" />
+    <Setter Property="FontWeight" Value="Medium" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Cursor" Value="Hand"/>
+  </Style>
+
+  <ControlTemplate x:Key="SearchButtonTemplate" TargetType="{x:Type Button}">
+    <Grid SnapsToDevicePixels="True">
+      <Border x:Name="border"
+              Background="{TemplateBinding Background}"
+              BorderBrush="{TemplateBinding BorderBrush}"
+              BorderThickness="{TemplateBinding BorderThickness}"
+              CornerRadius="0,3,3,0"
+              SnapsToDevicePixels="true">
+        <ContentPresenter x:Name="contentPresenter"
+                          Margin="{TemplateBinding Padding}"
+                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                          Focusable="False"
+                          RecognizesAccessKey="True"
+                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+      </Border>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsDefaulted" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushWhite}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushMainThemeBlue}" />
+      </Trigger>
+      <Trigger Property="IsMouseOver" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushDark60}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushDarkBlue}" />
+      </Trigger>
+      <Trigger Property="IsPressed" Value="true">
+        <Setter Property="Foreground" 
+                Value="{StaticResource brushMainSecondaryBlue}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{StaticResource brushDark80}" />
+      </Trigger>
+      <Trigger Property="IsEnabled" Value="false">
+        <Setter Property="Opacity" Value="0.4" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+
+  <ControlTemplate x:Key="BasicGreyButtonTemplate" TargetType="{x:Type Button}">
+    <Grid SnapsToDevicePixels="True">
+      <Border x:Name="border"
+              Background="{TemplateBinding Background}"
+              BorderBrush="{TemplateBinding BorderBrush}"
+              BorderThickness="{TemplateBinding BorderThickness}"
+              CornerRadius="5"
+              SnapsToDevicePixels="true">
+        <ContentPresenter x:Name="contentPresenter"
+                          Margin="{TemplateBinding Padding}"
+                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                          Focusable="False"
+                          RecognizesAccessKey="True"
+                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+      </Border>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsDefaulted" Value="true">
+        <Setter Property="Foreground" 
+                Value="{theme:ThemeResource ResourceKey=ContentBackground}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{theme:ThemeResource ResourceKey=PressedBorder}" />
+      </Trigger>
+      <Trigger Property="IsMouseOver" Value="true">
+        <Setter Property="Foreground" 
+                Value="{theme:ThemeResource ResourceKey=ContentBackground}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{theme:ThemeResource ResourceKey=PressedBackground}" />
+      </Trigger>
+      <Trigger Property="IsPressed" Value="true">
+        <Setter Property="Foreground" 
+                Value="{theme:ThemeResource ResourceKey=MinContrast}" />
+        <Setter TargetName="border" Property="Background" 
+                Value="{theme:ThemeResource ResourceKey=MouseOverBackground}" />
+      </Trigger>
+      <Trigger Property="IsEnabled" Value="false">
+        <Setter Property="Opacity" Value="0.4" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+
+  <Style x:Key="ButtonMin" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Border x:Name="borderMain"
+                Width="50" Height="50" Padding="5"
+                Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}">
+            <Grid>
+              <Path x:Name="pathGlyph"
+                  Stroke="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                  StrokeEndLineCap="Round"
+                  StrokeStartLineCap="Round"
+                  StrokeThickness="1.4" 
+                  Data="M 8,20 H 32"/>
+              <Border x:Name="borderDisabled"
+                    Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}"
+                    Visibility="Hidden" />
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="borderDisabled" Property="Visibility" Value="Visible" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!--  Maximize button style on the main window title bar.  -->
+  <Style x:Key="ButtonMax" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Border x:Name="borderMain"
+                Width="50" Height="50" Padding="5"
+                Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}">
+            <Grid>
+              <Path x:Name="pathGlyph"
+                  Stroke="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                  StrokeStartLineCap="Round"
+                  StrokeEndLineCap="Round"
+                  StrokeLineJoin="Round"
+                  StrokeThickness="1.4" 
+                  Data="M 7.7,7.7 H 32.3 V 32.3 H 7.7 Z"/>
+              <Border x:Name="borderDisabled"
+                    Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}"
+                    Visibility="Hidden" />
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="borderDisabled" Property="Visibility" Value="Visible" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!--  Restore button style on the main window title bar.  -->
+  <Style x:Key="ButtonRestore" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Border x:Name="borderMain"
+                Width="50" Height="50" Padding="5"
+                Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}">
+            <Grid>
+              <Path x:Name="pathGlyph1"
+                  Stroke="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                  StrokeStartLineCap="Round"
+                  StrokeEndLineCap="Round"
+                  StrokeLineJoin="Round"
+                  StrokeThickness="1.4"
+                  Data="M 5.7,11.7 H 28.3 V 34.3 H 5.7 Z"/>
+              <Path x:Name="pathGlyph2"
+                  Stroke="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                  StrokeStartLineCap="Round"
+                  StrokeEndLineCap="Round"
+                  StrokeLineJoin="Round"
+                  StrokeThickness="1.4"
+                  Data="M 11.7,11.7 V 5.7 H 34.3 V 28.3 h -6"/>
+              <Border x:Name="borderDisabled"
+                    Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}"
+                    Visibility="Hidden" />
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph1" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+              <Setter TargetName="pathGlyph2" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph1" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+              <Setter TargetName="pathGlyph2" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="borderDisabled" Property="Visibility" Value="Visible" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!--  Close button style on the main window title bar.  -->
+  <Style x:Key="ButtonClose" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Border x:Name="borderMain"
+                Width="50" Height="50" Padding="5"
+                Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}">
+            <Grid>
+              <Path x:Name="pathGlyph"
+                  Stroke="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                  StrokeStartLineCap="Round"
+                  StrokeEndLineCap="Round"
+                  StrokeLineJoin="Round"
+                  StrokeThickness="1.4"
+                  Data="m 8.5,8.5 23,23"/>
+              <Path x:Name="pathGlyph2"
+                  Stroke="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                  StrokeStartLineCap="Round"
+                  StrokeEndLineCap="Round"
+                  StrokeLineJoin="Round"
+                  StrokeThickness="1.4"
+                  Data="m 31.5,8.5 -23,23"/>
+              <Border x:Name="borderDisabled"
+                    Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}"
+                    Visibility="Hidden" />
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+              <Setter TargetName="pathGlyph2" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+              <Setter TargetName="pathGlyph2" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="borderDisabled" Property="Visibility" Value="Visible" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ButtonSun" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Border x:Name="borderMain"
+                  Width="50" Height="50" Padding="5"
+                  Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}">
+            <Grid>
+              <Canvas Width="40" Height="40">
+                <Ellipse x:Name="sun1" Canvas.Left="12" Canvas.Top="12"
+                 Width="16" Height="16"
+                 Fill="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                 StrokeThickness="0" />
+                <Path x:Name="rays" 
+                    Data="M 10.807613,10.80761 7.9791851,7.9791841 M 7,20 H 3 m 7.80761,9.192389 -2.828426,2.828428 M 20,33 v 4 m 9.192388,-7.80761 2.828428,2.828426 M 33,20 h 4 M 29.192389,10.807613 32.020816,7.9791854 M 20,7 V 3"
+                    Stroke="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                    StrokeThickness="2" />
+              </Canvas>
+              <Border x:Name="borderDisabled"
+                    Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}"
+                    Visibility="Hidden" />
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="sun1" Property="Fill" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+              <Setter TargetName="rays" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="sun1" Property="Fill" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+              <Setter TargetName="rays" Property="Stroke" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="borderDisabled" Property="Visibility" Value="Visible" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ButtonMoon" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Border x:Name="borderMain"
+                  Width="50" Height="50" Padding="5"
+                  Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}">
+            <Grid>
+              <Path x:Name="pathGlyph"
+                    Data="M 14.7,9 A 13.540061,13.540061 0 0 1 20.371884,20.019151 13.540061,13.540061 0 0 1 14.754875,30.999296 11.001301,11.001301 0 0 0 25.538,19.999979 11.001301,11.001301 0 0 0 14.7,9 Z"
+                    Fill="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                    StrokeThickness="0" />
+              <Border x:Name="borderDisabled"
+                      Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}"
+                      Visibility="Hidden" />
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph" Property="Fill" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="pathGlyph" Property="Fill" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="borderDisabled" Property="Visibility" Value="Visible" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ButtonLingo" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Border x:Name="borderMain"
+                  Width="50" Height="50" Padding="5"
+                  Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}">
+            <Grid>
+              <Path x:Name="glyph"
+                    Fill="{theme:ThemeResource ResourceKey=WindowHeaderForeground}"
+                    StrokeThickness="0"
+                    Data="M 19.999813 13.00024 A 11 6 0 0 0 8.9999674 18.999874 A 11 6 0 0 0 11.671122 22.914364 L 10.262423 26.297103 L 14.753621 24.270353 A 11 6 0 0 0 19.999813 25.000024 A 11 6 0 0 0 31.000175 18.999874 A 11 6 0 0 0 19.999813 13.00024 z " />
+              <Border x:Name="borderDisabled"
+                      Background="{theme:ThemeResource ResourceKey=WindowHeaderBackground}"
+                      Visibility="Hidden" />
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="glyph" Property="Fill" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="borderMain" Property="Background" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverBackground}" />
+              <Setter TargetName="glyph" Property="Fill" Value="{theme:ThemeResource ResourceKey=WindowHeaderMouseOverForeground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="borderDisabled" Property="Visibility" Value="Visible" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ButtonCopy" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Cursor" Value="Hand"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Viewbox Stretch="Uniform" >
+            <Canvas Width="40" Height="40">
+              <Path x:Name="bg"
+                    Data="m7,5 h13 l5,5 h3 v5 h5 v21 h-18 v-5 h-8 z"
+                    Stroke="{x:Null}"
+                    Fill="{theme:ThemeResource ResourceKey=TransparentBackground}"/>
+              <gui:XamlImage x:Name="glyph"
+                             Template="{DynamicResource Icon_Copy}"
+                             Foreground="{StaticResource brushMainThemeBlue}"/>
+            </Canvas>
+          </Viewbox>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="glyph" Property="Foreground" 
+                      Value="{StaticResource brushBlack}" />
+              <Setter TargetName="bg" Property="Fill" 
+                      Value="{StaticResource brushMainThemeBlue}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="glyph" Property="Foreground" 
+                      Value="{StaticResource brushMainThemeBlue}" />
+              <Setter TargetName="bg" Property="Fill" 
+                      Value="{StaticResource brushMainThemeBlue}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="glyph" Property="Opacity" Value="0.4" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ButtonCopyThemed" TargetType="{x:Type Button}">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Cursor" Value="Hand"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Viewbox Stretch="Uniform" >
+            <Canvas Width="40" Height="40">
+              <Path x:Name="bg"
+                    Data="m7,5 h13 l5,5 h3 v5 h5 v21 h-18 v-5 h-8 z"
+                    Stroke="{x:Null}"
+                    Fill="{theme:ThemeResource ResourceKey=TransparentBackground}"/>
+              <gui:XamlImage x:Name="glyph"
+                             Template="{DynamicResource Icon_Copy}"
+                             Foreground="{theme:ThemeResource ResourceKey=Complement}"/>
+            </Canvas>
+          </Viewbox>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="glyph" Property="Foreground" 
+                      Value="{theme:ThemeResource ResourceKey=MaxContrast}" />
+              <Setter TargetName="bg" Property="Fill" 
+                      Value="{theme:ThemeResource ResourceKey=Complement}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+              <Setter TargetName="glyph" Property="Foreground" 
+                      Value="{theme:ThemeResource ResourceKey=Complement}" />
+              <Setter TargetName="bg" Property="Fill" 
+                      Value="{theme:ThemeResource ResourceKey=Complement}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="glyph" Property="Opacity" Value="0.4" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ButtonSearch" TargetType="{x:Type Button}"
+         BasedOn="{StaticResource BlueButtonStyle}">
+    <Setter Property="Template" Value="{StaticResource SearchButtonTemplate}"/>
+    <Setter Property="Content">
+      <Setter.Value>
+        <gui:XamlImage Template="{DynamicResource Icon_Search}"/>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>
