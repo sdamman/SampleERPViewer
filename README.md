@@ -1,5 +1,16 @@
-# Made2View
-Made2Manage View-Only limited use application
+# SampleERPViewer
+## Sample WPF Application created as a view-only client for ERP data.
 
-![m2v](https://github.com/ALMACO-E-S/Made2View/blob/main/docs/icons/m2v.svg)
+### SEV can do the following:
+- Look up Item Master information.
+- Search by part description, part number, or vendor part number
+- Perform advanced description search using multiple contains, starts with, or ends with terms
+- Look up BOMs
+- Look up Where-Used information
+- Look up Job Orders
+- Look up Sales Orders
+- All returned information can be copied to the clipboard with a single click and then pasted into other applications, typically Excel, in the same tabular format it was displayed in SEV.
+
+  
+![sev](https://github.com/sdamman/sampleerpviewer/blob/main/docs/images/sev.svg)
 
