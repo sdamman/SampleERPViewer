@@ -18,8 +18,11 @@
 
 ![main_dark](https://github.com/sdamman/SampleERPViewer/blob/main/docs/images/main_dark.png)
 
-![bom_detail](https://github.com/sdamman/SampleERPViewer/blob/main/docs/images/bom_detail.png)
+![bom_detail](https://github.com/sdamman/SampleERPViewer/blob/main/docs/images/bom-detail.png)
 
 BOM Detail
 
+![sales_order](https://github.com/sdamman/SampleERPViewer/blob/main/docs/images/sales_order.png)
+
+![job_order](https://github.com/sdamman/SampleERPViewer/blob/main/docs/images/job_order.png)
 
