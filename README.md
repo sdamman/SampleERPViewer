@@ -14,3 +14,12 @@
   
 ![sev](https://github.com/sdamman/sampleerpviewer/blob/main/docs/images/sev.svg)
 
+![main_light](https://github.com/sdamman/SampleERPViewer/blob/main/docs/images/main_light.png)
+
+![main_dark](https://github.com/sdamman/SampleERPViewer/blob/main/docs/images/main_dark.png)
+
+![bom_detail](https://github.com/sdamman/SampleERPViewer/blob/main/docs/images/bom_detail.png)
+
+BOM Detail
+
+
