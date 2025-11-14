@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.7.33711.374
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SE.UI", "SEV.UI\SEV.UI.csproj", "{969D1FF8-8E9A-4827-B0FF-BB9B952C6118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEV.UI", "SEV.UI\SEV.UI.csproj", "{969D1FF8-8E9A-4827-B0FF-BB9B952C6118}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEV.ViewModels", "SEV.ViewModels\SEV.ViewModels.csproj", "{23C8E056-18A9-4788-B7A7-0F9DA282BD01}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEV.Data", "SEV.Data\SEV.Data.csproj", "{2CFC7582-6378-41F7-A293-DB72F72880C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEV.Domain", "SEV.Domain\SEV.Domain.csproj", "{84E4774A-E789-41BF-8AA6-639BE241B308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEV.Test", "SEV.Test\SEV.Test.csproj", "{1A65510F-9FFF-4E29-B58A-D131C2E6A4DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{84E4774A-E789-41BF-8AA6-639BE241B308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84E4774A-E789-41BF-8AA6-639BE241B308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84E4774A-E789-41BF-8AA6-639BE241B308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A65510F-9FFF-4E29-B58A-D131C2E6A4DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A65510F-9FFF-4E29-B58A-D131C2E6A4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A65510F-9FFF-4E29-B58A-D131C2E6A4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A65510F-9FFF-4E29-B58A-D131C2E6A4DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
